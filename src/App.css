@@ -1,0 +1,83 @@
+tr th,
+tr td {
+    border-right: 1px solid #000;
+    white-space: nowrap;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+}
+
+tr th:last-child,
+tr td:last-child {
+    border-right-width: 0;
+}
+
+tr:last-child td {
+    border-bottom-width: 0;
+}
+
+tr:last-child {
+    border-bottom-width: 0;
+}
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+.status-list {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.status-list .list-item {
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.status-list .list-item label {
+    padding-left: 2px;
+}
+
+thead th input {
+    padding: 2px 8px;
+    border: 1px solid #000;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 400;
+}
+
+.order-grid td .table-vr-container {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 620px) {
+    .order-grid thead {
+        display: none;
+    }
+
+    .order-grid tbody tr,
+    .product-grid tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom-width: 2px;
+        border-color: #000;
+    }
+
+    .order-grid tbody tr:last-child,
+    .product-grid tbody tr:last-child {
+        border-bottom-width: 0;
+    }
+
+    .order-grid tbody td {
+        position: relative;
+    }
+
+    .order-grid tbody td::before {
+        content: attr(data-name) ": ";
+        text-transform: capitalize;
+        font-weight: 500;
+        padding-right: 10px;
+    }
+}

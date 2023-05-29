@@ -156,7 +156,7 @@ const App: FC = () => {
                       </div>
 
                     </td>
-                    <td className="text-right">{od.Total}</td>
+                    <td className="md:text-right" data-name="Total">{od.Total}</td>
                   </tr>
                 )
               })
